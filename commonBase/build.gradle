@@ -1,8 +1,32 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.fox.framework'
+                artifactId = 'commonbase'
+                version = '0.0.1'
+            }
+        }
+
+        repositories {
+            maven {
+                name = "alilyun"
+                url = "https://packages.aliyun.com/maven/repository/2260060-release-7IuIaX/"
+                credentials {
+                    username = "62e68c1790b1cc6354d650ec"
+                    password = "sq2LSJol8zMK"
+                }
+            }
+        }
+    }
+}
 android {
     compileSdk 32
 
@@ -27,6 +51,7 @@ android {
         jvmTarget = '1.8'
     }
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
