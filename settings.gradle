@@ -16,6 +16,6 @@ dependencyResolutionManagement {
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
     }
 }
-rootProject.name = "commonBase"
+rootProject.name = "CommonBase"
 include ':app'
-include ':commonBase'
+include ':CommonBase'

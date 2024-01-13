@@ -11,7 +11,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.fox.framework'
                 artifactId = 'commonbase'
-                version = '0.0.1'
+                version = '0.0.3'
             }
         }
 
